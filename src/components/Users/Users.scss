@@ -1,0 +1,24 @@
+.users {
+  width: 100%;
+  max-width: 400px;
+
+  &__list {
+    border: 1px solid lightgrey;
+  }
+
+  &__user {
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 2rem;
+    list-style: none;
+    cursor: pointer;
+
+    &--active {
+      background-color: lightgrey;
+    }
+
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+}

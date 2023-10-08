@@ -1,0 +1,9 @@
+.select-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button {
+    max-width: 200px;
+  }
+}
