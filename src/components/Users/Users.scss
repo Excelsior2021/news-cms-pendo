@@ -2,6 +2,12 @@
   width: 100%;
   max-width: 400px;
 
+  &__heading {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
   &__list {
     border: 1px solid lightgrey;
   }

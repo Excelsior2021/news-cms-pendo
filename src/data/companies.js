@@ -1,7 +1,7 @@
 const companies = [
   {
     id: 1,
-    name: "Dunder Mifflin",
+    name: "Dunder Miffin",
     employees: 5000,
     plan: "premium",
   },

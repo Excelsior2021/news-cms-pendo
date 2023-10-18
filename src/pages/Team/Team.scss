@@ -1,0 +1,11 @@
+.team {
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}

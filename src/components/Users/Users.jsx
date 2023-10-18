@@ -8,11 +8,11 @@ const Users = props => {
   const [selectedUserId, setSelectedUserId] = createSignal(null)
 
   const handleSelectedUser = user => {
-    if (selectedUserId()) {
+    if (selectedUserId() === user.id) {
       setSelectedUserId(null)
       props.setButtonText("use app anonymously")
-      setUser(null)
-      setCompany(null)
+      setUser(users[0])
+      setCompany(companies[0])
     } else {
       const company = companies.find(company => user.companyId === company.id)
       setSelectedUserId(user.id)
@@ -24,7 +24,7 @@ const Users = props => {
 
   return (
     <div class="users">
-      <p>Select a user</p>
+      <p class="users__heading">Select a user</p>
       <ul class="users__list">
         <For each={users}>
           {user => (

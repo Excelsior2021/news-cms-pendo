@@ -1,0 +1,32 @@
+@use "../../partials/mixins" as *;
+
+.new-report {
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+    text-transform: capitalize;
+  }
+
+  &__input {
+    font-family: inherit;
+    margin-bottom: 24px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+  }
+
+  &__button {
+    @include button;
+  }
+}
