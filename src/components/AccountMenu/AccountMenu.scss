@@ -1,0 +1,20 @@
+@use "../../partials/mixins" as *;
+
+.account-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  width: fit-content;
+  height: 50px;
+  margin-left: auto;
+
+  &__divider {
+    height: 100%;
+    border: 1px solid lightgrey;
+  }
+
+  &__button {
+    @include button;
+    padding: 1.2rem 5rem;
+  }
+}

@@ -1,9 +1,18 @@
 import { createSignal } from "solid-js"
 import Users from "../../components/Users/Users"
-import { company, setAnonymousUse, setSignedIn, user } from "../../App"
+import {
+  company,
+  setAnonymousUse,
+  setCompany,
+  setSignedIn,
+  setUser,
+  user,
+} from "../../App"
 import { initializePendo } from "../../utils/utils"
 import { useNavigate } from "@solidjs/router"
 import routes from "../../utils/routes"
+import users from "../../data/users"
+import companies from "../../data/companies"
 import "./SelectUser.scss"
 
 const SelectUser = () => {
@@ -13,9 +22,15 @@ const SelectUser = () => {
     if (user()) {
       setSignedIn(true)
       initializePendo(user(), company())
+      localStorage.setItem(
+        "session",
+        JSON.stringify({ user: user(), company: company() })
+      )
     }
     if (!user()) {
       setAnonymousUse(true)
+      setUser(users[0])
+      setCompany(companies[0])
       initializePendo(null, null)
     }
     navigate(routes.reports)
