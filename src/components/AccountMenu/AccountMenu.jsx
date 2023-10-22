@@ -10,7 +10,7 @@ import "./AccountMenu.scss"
 
 const AccountMenu = () => {
   const logout = () => {
-    localStorage.removeItem("session")
+    localStorage.clear()
     setSignedIn(false)
     setAnonymousUse(false)
     setUser(null)
