@@ -20,6 +20,7 @@ const SelectUser = () => {
   const [buttonText, setButtonText] = createSignal("use app anonymously")
   const handleAuth = () => {
     if (user()) {
+      console.log(company())
       setSignedIn(true)
       initializePendo(user(), company())
       localStorage.setItem(

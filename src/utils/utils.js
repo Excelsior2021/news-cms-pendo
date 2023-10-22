@@ -1,4 +1,5 @@
 export const initializePendo = (user, company) => {
+  console.log(company)
   pendo.initialize({
     visitor: {
       id: user ? user.email : null,

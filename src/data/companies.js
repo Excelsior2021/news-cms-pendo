@@ -13,7 +13,7 @@ const companies = [
   },
   {
     id: 3,
-    company: "Reportex",
+    name: "Reportex",
     employees: 10,
     plan: "standard",
   },
