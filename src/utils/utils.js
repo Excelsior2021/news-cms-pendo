@@ -1,5 +1,8 @@
+const continents = ["europe", "north america", "south america", "asia", "africa", "australia" ]
+
+const num = Math.floor((Math.random() * 6)) 
+
 export const initializePendo = (user, company) => {
-  console.log(company)
   pendo.initialize({
     visitor: {
       id: user ? user.email : null,
@@ -8,6 +11,7 @@ export const initializePendo = (user, company) => {
       role: user ? user.role : null,
       startDate: user ? user.startDate : null,
       entries: user ? user.entires : null,
+      continent: continents[num]
     },
 
     account: {
